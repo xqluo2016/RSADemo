@@ -30,8 +30,8 @@ public class RSA {
      */
     void init(int p, int q){
         n = p*q;
-        // λ(n)=LCD(λ(p),λ(q))=LCD(φ(p),φ(q))=LCD(p-1,q-1)
-        int lambdaN = lcd(p-1,q-1);
+        // λ(n)=lcm(λ(p),λ(q))=lcm(φ(p),φ(q))=lcm(p-1,q-1)
+        int lambdaN = lcm(p-1,q-1);
         e = coprime(lambdaN);
         d = mmi(e, lambdaN);
         System.out.println("RSA p="+p+", q="+q+", n="+n+", lambda(n)="+lambdaN+", e="+e+", d="+d);
@@ -58,7 +58,7 @@ public class RSA {
     /**
      * 最小公倍数
      */
-    int lcd(int a, int b) {
+    int lcm(int a, int b) {
         int x = 1;
         for(;x<=b;x++){
            if( a * x % b ==0) break;
