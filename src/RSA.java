@@ -41,18 +41,8 @@ public class RSA {
      * 找一个互质数
      */
     int coprime(int n){
-        int x = 3;
-        for(;x<n;x++){
-            boolean coprime = true;
-            for(int i=2;i<=x;i++){
-                if(n%i==0 && x% i==0){
-                    coprime=false;
-                    break;
-                }
-            }
-            if(coprime)return x;
-        }
-        throw new IllegalArgumentException("Cannot find co-prime number for "+n);
+        // any prime number smaller than n can do
+        return 3;
     }
 
     /**
