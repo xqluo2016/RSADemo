@@ -5,11 +5,15 @@ A simple java code to demonstrate how [RSA](https://en.wikipedia.org/wiki/RSA_(c
 Here is a brief write in Chinese:
 
 
-# RSA算法是一种常用的非对称加密算法。它的加解密算法的数学基础是模幂运算和质数的一些性质。
+# RSA算法
+
+RSA算法是一种常用的非对称加密算法。它的加解密算法的数学基础是模幂运算和质数的一些性质。
 
 
 
-## 模幂运算(Module Exponentiation)是底数m的e次幂除以n的模（余数）：
+## 模幂运算(Module Exponentiation)
+
+模幂运算是类似这样的一种运算： 底数m的e次幂除以n的模（余数）：
 
 c = m<sup>e</sup> mod n  (公式一）
 
@@ -36,7 +40,8 @@ c = m<sup>e</sup> mod n  (公式一）
 上面只是模幂运算的一个介绍，模幂并不能用来作为加密算法。因为上面的算法不包含解密方法。
 
 
-## 完整的加解密算法实际上依赖于下面的模幂运算原理：我们可以找出一组数e，d和n，使得对于任何小于n的正整数m满足以下等式：
+## RSA加解密算法
+RSA加解密算法实际上依赖于下面的模幂运算原理：我们可以找出一组数e，d和n，使得对于任何小于n的正整数m满足以下等式：
 
 ![formula2](images/f2.png "公式二")(公式二）
 
